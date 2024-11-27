@@ -31,29 +31,29 @@ URL：https://\<Actor所在的服务器\>/.well-known/intersocial/actor/\<Actor�
 - 标准机器人账号：std:robot
 
 section代表信息条目，例如：
-- 昵称：std:nickname \
+- 昵称：`std:nickname` \
   \- 普通string
-- 头像：std:headimage \
+- 头像：`std:headimage` \
   \- 图片URL或IPFS QmID
-- 横幅图：std:diy:background \
+- 横幅图：`std:diy:background` \
   \- 图片URL或IPFS QmID
-- QQ号：std:contact:qq \
+- QQ号：`std:contact:qq` \
   \- string类型
-- 手机号：std:contact:tel \
+- 手机号：`std:contact:tel` \
   \- string类型
-- 微信号：std:contact:weixin \
+- 微信号：`std:contact:weixin` \
   \- 普通string
-- B站UID：std:contact:bilibili \
+- B站UID：`std:contact:bilibili` \
   \- string类型
-- Matrix账号：std:matrixid \
+- Matrix账号：`std:matrixid` \
   \- string类型，形如 @alice:example.com
-- 网站：std:website \
+- 网站：`std:website` \
   \- URL
-- Github：std:github \
+- Github：`std:github` \
   \- URL
-- 首页主题色：std:diy:color \
+- 首页主题色：`std:diy:color` \
   \- Hex，必须带#号，全大写或全小写
-- 个人信息栏：std:diy:section \
+- 个人信息栏：`std:diy:section` \
   \- list，包含多个二元素的list，其中每个子list的第一项是条目名（string类型），第二项是条目值（string类型）
 
 ### 1.2. Actor Message Entrypoint
@@ -99,23 +99,23 @@ app代表着消息的类型，定义如下：
 - 表情回应：cn.yostar.ba-yuri.protocol.emojiback
 
 data代表着数据条目，定义如下：
-- 标题：io.lilipub.title \
+- 标题：`io.lilipub.title` \
   \- string类型
-- 文章正文：io.lilipub.content \
+- 文章正文：`io.lilipub.content` \
   \- string类型
-- 内容警告：cn.yostar.ba-yuri.protocol.warning \
+- 内容警告：`cn.yostar.ba-yuri.protocol.warning` \
   \- string类型
-- 动态内容：io.lilipub.content \
+- 动态内容：`io.lilipub.content` \
   \- string类型
-- 文章头图：io.lilipub.headimg \
+- 文章头图：`io.lilipub.headimg` \
   \- string类型
-- 音频/视频源：io.lilipub.stream \
+- 音频/视频源：`io.lilipub.stream` \
   \- URL或IPFS QmID
-- 音频/视频简介：io.lilipub.content \
+- 音频/视频简介：`io.lilipub.content` \
   \- string类型
-- 音频/视频源类型：io.lilipub.stream.method \
+- 音频/视频源类型：`io.lilipub.stream.method` \
   \- 枚举型，支持"video_file"、"hls"、"ipfs_qmid"
-- 表情回应：io.lilipub.content \
+- 表情回应：`io.lilipub.content` \
   \- unicode emoji或URL或IPFS QmID
-- 被回复的内容ID：cn.yostar.ba-yuri.protocol.replyto \
+- 被回复的内容ID：`cn.yostar.ba-yuri.protocol.replyto` \
   \- 具有两个元素的list，第一个元素是string，为内容所在服务器域名；第二个元素是string，为内容ID。
