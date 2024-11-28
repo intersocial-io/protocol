@@ -7,7 +7,7 @@ Actor用于表达可以发送事件的客体（用户、功能接口等）。
 
 Actor需要具备如下的端点：
 ### 1.1. Actor Endpoint
-URL：https://\<Actor所在的服务器\>/.well-known/intersocial/actor/\<Actor的名称\>
+URL：`https://<Actor所在的服务器>/.well-known/intersocial/actor/<Actor的名称>`
 
 返回的数据类似于：
 ```
@@ -44,9 +44,9 @@ section代表信息条目，例如：
 - 微信号：`std:contact:weixin` \
   \- 普通string
 - B站UID：`std:contact:bilibili` \
-  \- string类型
+  \- string类型，内容直接为UID数字，形如`12345678910`
 - Matrix账号：`std:matrixid` \
-  \- string类型，形如 @alice:example.com
+  \- string类型，形如`@alice:example.com`
 - 网站：`std:website` \
   \- URL
 - Github：`std:github` \
@@ -57,7 +57,7 @@ section代表信息条目，例如：
   \- list，包含多个二元素的list，其中每个子list的第一项是条目名（string类型），第二项是条目值（string类型）
 
 ### 1.2. Actor Message Entrypoint
-URL：https://\<Actor所在的服务器\>/.well-known/lilipub/stream/intersocial:\<Actor的名称\>
+URL：`https://<Actor所在的服务器>/.well-known/lilipub/stream/intersocial:<Actor的名称>`
 
 URL参数（均为可选）：
 - page：页码，0为第一页；
@@ -73,7 +73,7 @@ URL参数（均为可选）：
 ## 2. Message
 Message代表了用户发布的互动（包括文本、表情回应等）。Message的ID应当是一个数字，在同一服务器应当唯一。
 ### 2.1 Message Entrypoint
-URL：https://\<Actor所在的服务器\>/.well-known/lilipub/events/\<Message的ID\>
+URL：`https://<Actor所在的服务器>/.well-known/lilipub/events/<Message的ID>`
 
 返回的数据类似于：
 ```
@@ -114,7 +114,7 @@ data代表着数据条目，定义如下：
 - 音频/视频简介：`io.lilipub.content` \
   \- string类型
 - 音频/视频源类型：`io.lilipub.stream.method` \
-  \- 枚举型，支持"video_file"、"hls"、"ipfs_qmid"
+  \- string枚举型，支持`video_file`、`hls`、`ipfs_qmid`
 - 表情回应：`io.lilipub.content` \
   \- unicode emoji或URL或IPFS QmID
 - 被回复的内容ID：`cn.yostar.ba-yuri.protocol.replyto` \
