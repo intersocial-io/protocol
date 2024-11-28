@@ -98,7 +98,7 @@ URL定义：`https://<Actor所在的服务器>/.well-known/lilipub/events/<Messa
 其中，owned_stream代表actor的lilipub id，格式为`intersocial:<Actor的名称>`；
 
 app代表着消息的类型，定义如下：
-- 动态：`io.lilipub.note`
+- 动态/评论：`io.lilipub.note`
 - 文章：`io.lilipub.article`
 - 视频：`io.lilipub.video`
 - 音频：`io.lilipub.music`
