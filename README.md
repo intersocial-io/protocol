@@ -25,10 +25,10 @@ URL：https://\<Actor所在的服务器\>/.well-known/intersocial/actor/\<Actor�
 }
 ```
 其中，actor_type代表Actor类型，例如：
-- 标准个人社交账号：std:person
-- 标准个人博客账号：std:blog
-- 标准组织/企业账号：std:group
-- 标准机器人账号：std:robot
+- 标准个人社交账号：`std:person`
+- 标准个人博客账号：`std:blog`
+- 标准组织/企业账号：`std:group`
+- 标准机器人账号：`std:robot`
 
 section代表信息条目，例如：
 - 昵称：`std:nickname` \
@@ -92,11 +92,11 @@ URL：https://\<Actor所在的服务器\>/.well-known/lilipub/events/\<Message�
 其中，owned_stream代表actor的lilipub id，格式为`intersocial:<Actor的名称>`；
 
 app代表着消息的类型，定义如下：
-- 动态：io.lilipub.note
-- 文章：io.lilipub.article
-- 视频：io.lilipub.video
-- 音频：io.lilipub.music
-- 表情回应：cn.yostar.ba-yuri.protocol.emojiback
+- 动态：`io.lilipub.note`
+- 文章：`io.lilipub.article`
+- 视频：`io.lilipub.video`
+- 音频：`io.lilipub.music`
+- 表情回应：`cn.yostar.ba-yuri.protocol.emojiback`
 
 data代表着数据条目，定义如下：
 - 标题：`io.lilipub.title` \
