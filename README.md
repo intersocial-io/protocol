@@ -7,7 +7,9 @@ Actor用于表达可以发送事件的客体（用户、功能接口等）。
 
 Actor需要具备如下的端点：
 ### 1.1. Actor Endpoint
-URL：`https://<Actor所在的服务器>/.well-known/intersocial/actor/<Actor的名称>`
+URL定义：`https://<Actor所在的服务器>/.well-known/intersocial/actor/<Actor的名称>`
+
+形如：`https://example.com/.well-known/intersocial/actor/alice`
 
 返回的数据类似于：
 ```
@@ -57,7 +59,9 @@ section代表信息条目，例如：
   \- list，包含多个二元素的list，其中每个子list的第一项是条目名（string类型），第二项是条目值（string类型）
 
 ### 1.2. Actor Message Entrypoint
-URL：`https://<Actor所在的服务器>/.well-known/lilipub/stream/intersocial:<Actor的名称>`
+URL定义：`https://<Actor所在的服务器>/.well-known/lilipub/stream/intersocial:<Actor的名称>`
+
+形如：`https://example.com/.well-known/lilipub/stream/intersocial:alice`
 
 URL参数（均为可选）：
 - page：页码，0为第一页；
@@ -73,7 +77,9 @@ URL参数（均为可选）：
 ## 2. Message
 Message代表了用户发布的互动（包括文本、表情回应等）。Message的ID应当是一个数字，在同一服务器应当唯一。
 ### 2.1 Message Entrypoint
-URL：`https://<Actor所在的服务器>/.well-known/lilipub/events/<Message的ID>`
+URL定义：`https://<Actor所在的服务器>/.well-known/lilipub/events/<Message的ID>`
+
+形如：`https://example.com/.well-known/lilipub/events/3155`
 
 返回的数据类似于：
 ```
@@ -118,6 +124,8 @@ data代表着数据条目，定义如下：
 - 音频/视频源类型：`io.lilipub.stream.method` \
   \- string枚举型，支持`video_file`、`hls`、`ipfs_qmid`
 - 表情回应：`io.lilipub.content` \
-  \- unicode emoji或URL或IPFS QmID
+  \- unicode emoji或图片URL或IPFS QmID
 - 被回复的内容ID：`cn.yostar.ba-yuri.protocol.replyto` \
   \- 具有两个元素的list，第一个元素是string，为内容所在服务器域名；第二个元素是string，为内容ID。
+- 最近修改时间：`io.lilipub.timestamp.modify` \
+  \- int类型，秒级别的UNIX时间戳
