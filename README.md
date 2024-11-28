@@ -103,6 +103,8 @@ data代表着数据条目，定义如下：
   \- string类型
 - 文章正文：`io.lilipub.content` \
   \- string类型
+- 发送时间：`io.lilipub.timestamp` \
+  \- int类型，秒级别的UNIX时间戳
 - 内容警告：`cn.yostar.ba-yuri.protocol.warning` \
   \- string类型
 - 动态内容：`io.lilipub.content` \
