@@ -128,6 +128,6 @@ data代表着数据条目，定义如下：
 - 表情回应：`io.lilipub.content` \
   \- unicode emoji或图片URL或IPFS QmID
 - 被回复的内容ID：`cn.yostar.ba-yuri.protocol.replyto` \
-  \- 具有两个元素的list，第一个元素是string，为内容所在服务器域名；第二个元素是string，为内容ID。
+  \- 具有两个元素的list，第一个元素是string，为内容所在服务器域名；第二个元素是int，为内容ID。
 - 最近修改时间：`io.lilipub.timestamp.modify` \
   \- int类型，秒级别的UNIX时间戳
