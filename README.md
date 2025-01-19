@@ -1,5 +1,5 @@
 # InterSocial Protocol
-InterSocial Protocol，原名“蔚蓝档案官方百合站”，是一个去中心化社交协议。
+InterSocial Protocol是一个去中心化社交协议。
 ## 1. Actor
 Actor用于表达可以发送事件的客体（用户、功能接口等）。
 
