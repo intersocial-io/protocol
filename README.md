@@ -131,3 +131,18 @@ data代表着数据条目，定义如下：
   \- 具有两个元素的list，第一个元素是string，为内容所在服务器域名；第二个元素是int，为内容ID。
 - 最近修改时间：`io.lilipub.timestamp.modify` \
   \- int类型，秒级别的UNIX时间戳
+### 2.2 Notify Webhook
+URL定义：`https://<Actor所在的服务器>/.well-known/io.github.intersocial-io/notify`
+
+请求的POST数据类似于：
+```
+[
+  {
+    "host":"example.com",
+    "events":["1","2","3"]
+  }
+]
+```
+其中，每一项代表一个host中要通知过去的全部数据。如果通知者有多个域名，则可以设置多个list项。
+
+host条目代表域名，events条目代表事件ID。
